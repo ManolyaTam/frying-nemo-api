@@ -26,7 +26,7 @@ app.listen(port, () => {
 
 const connectToDB = () => {
   console.log("connecting")
-  mongoose.connect("mongodb://127.0.0.1:27017/frying-nemo")
+  mongoose.connect(process.env.DB_URI as string)
     .then(() => console.log('successfully connected to database!'))
     .catch((err) => console.log(`something went wrong ;-(\n${err}`))
 }
