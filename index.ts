@@ -9,7 +9,7 @@ dotenv.config();
 
 const app: Express = express();
 const port = process.env.PORT || 3001;
-app.use(cors({ origin: 'http://localhost:3000' }))
+app.use(cors({ origin: 'https://frying-nemo-ui.onrender.com' }))
 app.use(express.json());
 app.use('/menu', itemsRouter);
 app.use(userRouter);
